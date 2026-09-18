@@ -122,8 +122,8 @@ outputs:
     script: install.sh  # [unix]
     script: install.bat  # [win]
     build:
-      # The wrapper flavor leads the build string so downstreams can pin one with
-      # `rdkit {{ version }} boost_*`; see conda_build_config.yaml.
+      # Downstreams pin a flavor with `rdkit {{ version }} boost_*`; see
+      # conda_build_config.yaml.
       string: {{ wrapper_flavor }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}
     requirements:
       build:
